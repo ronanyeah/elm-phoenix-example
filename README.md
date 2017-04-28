@@ -5,7 +5,7 @@ This is intended to be a teaching tool rather than a boilerplate, therefore the 
 
 Requirements:
 - [Phoenix](http://www.phoenixframework.org/docs/installation)
-- Node.js/NPM (Install using [NVM](https://github.com/creationix/nvm))
+- Node.js/NPM (Install using [nvm](https://github.com/creationix/nvm))
 
 To run:
 - `$ npm install`
