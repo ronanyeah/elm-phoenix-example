@@ -1,4 +1,7 @@
 # Elm + Phoenix
+
+__NOTE:__ This represents Phoenix 1.2. It will be shifted to Phoenix 1.3 as soon as possible.
+
 This is a minimum setup for an Elm + Phoenix project, using webpack for bundling.
 
 This is intended to be a teaching tool rather than a boilerplate, therefore the webpack config is as small as possible and a lot of the files that a Phoenix project initialises with have been removed.
