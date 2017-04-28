@@ -8,9 +8,10 @@ Requirements:
 - Node.js/NPM (Install using [NVM](https://github.com/creationix/nvm))
 
 To run:
-- `$ mix deps.get`
+- `$ npm install`
 - `$ npm run build`
-- `$ npm start`
+- `$ mix deps.get`
+- `$ mix phoenix.server`
 - Visit http://localhost:4000.
 
 There is also an Elm watch script, `npm run watch`.

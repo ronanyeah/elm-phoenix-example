@@ -4,9 +4,7 @@
   "description": "minimum elm phoenix setup, with webpack",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "mix phoenix.server",
-    "test": "mix test"
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
