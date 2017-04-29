@@ -12,7 +12,7 @@ The Phoenix application has been named `Foo` to make it easy to identify where y
 - [Elixir](http://elixir-lang.org/)/[Mix](http://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)/[Phoenix](http://www.phoenixframework.org/) ([Installation guide](http://www.phoenixframework.org/docs/installation))
 - [Node.js](https://nodejs.org/en/)/[npm](https://www.npmjs.com/) (Install using [nvm](https://github.com/creationix/nvm))
 - [elm](http://elm-lang.org/) (`$ npm i -g elm`)
-
+- A [PostgreSQL](https://www.postgresql.org/) server running on your machine.
 
 ## FEATURES
 __BACKEND:__  
@@ -25,10 +25,11 @@ As a convenience due to the location of `package.json`, I have added a custom mi
 ## USAGE
 __INITIAL SETUP:__
 - `$ cd assets`
-- `$ npm install`
-- `$ elm-package install`
+- `$ npm install` (Gets npm dependencies)
+- `$ elm-package install` (Gets elm dependencies)
 - `$ cd ..`
-- `$ mix deps.get`
+- `$ mix deps.get` (Gets Phoenix dependencies)
+- `$ mix ecto.create` (Sets up database)
 
 __TO RUN:__
 - `$ mix npm build` or `$ mix npm watch`
