@@ -15,11 +15,11 @@ The Phoenix application has been named `Foo` to make it easy to identify where y
 
 
 ## FEATURES
-__BACKEND:__
-Basically just `$ mix phx.new foo --no-brunch`, with changes made to `./lib/foo/web/templates/layout/app.html.eex` and `./lib/foo/web/templates//index.html.eex` to load up the elm app.
-__FRONTEND:__
-All related files are found in `./assets`, including `package.json` and `elm-package.json`. Therefore `npm install` and `elm-package install` will have to be run from there.
-__SCRIPTS:__
+__BACKEND:__  
+Basically just `$ mix phx.new foo --no-brunch`, with changes made to `./lib/foo/web/templates/layout/app.html.eex` and `./lib/foo/web/templates//index.html.eex` to load up the elm app.  
+__FRONTEND:__  
+All related files are found in `./assets`, including `package.json` and `elm-package.json`. Therefore `npm install` and `elm-package install` will have to be run from there.  
+__SCRIPTS:__  
 As a convenience due to the location of `package.json`, I have added a custom mix task (`./lib/mix/npm.ex`) which allows the execution of `npm run` scripts from the project root using mix: `mix npm build`, `mix npm watch`, etc.
 
 ## USAGE
