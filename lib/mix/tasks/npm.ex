@@ -1,4 +1,4 @@
-defmodule Mix.Tasks.Foo.Npm do
+defmodule Mix.Tasks.Npm do
   use Mix.Task
 
   @shortdoc "Executes npm scripts from assets directory."
