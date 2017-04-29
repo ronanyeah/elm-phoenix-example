@@ -16,44 +16,44 @@ defmodule Foo.Web do
   below.
   """
 
-  def model do
-    quote do
-      # Define common model functionality
-    end
-  end
-
   def controller do
     quote do
-      use Phoenix.Controller
-
-      import Foo.Router.Helpers
-      import Foo.Gettext
+      use Phoenix.Controller, namespace: Foo.Web
+      import Plug.Conn
+      import Foo.Web.Router.Helpers
+      import Foo.Web.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "web/templates"
+      use Phoenix.View, root: "lib/foo/web/templates",
+                        namespace: Foo.Web
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
 
-      import Foo.Router.Helpers
-      import Foo.ErrorHelpers
-      import Foo.Gettext
+      # Use all HTML functionality (forms, tags, etc)
+      use Phoenix.HTML
+
+      import Foo.Web.Router.Helpers
+      import Foo.Web.ErrorHelpers
+      import Foo.Web.Gettext
     end
   end
 
   def router do
     quote do
       use Phoenix.Router
+      import Plug.Conn
+      import Phoenix.Controller
     end
   end
 
   def channel do
     quote do
       use Phoenix.Channel
-      import Foo.Gettext
+      import Foo.Web.Gettext
     end
   end
 

@@ -5,11 +5,15 @@
 # is restricted to this project.
 use Mix.Config
 
+# General application configuration
+config :foo,
+  ecto_repos: [Foo.Repo]
+
 # Configures the endpoint
-config :foo, Foo.Endpoint,
+config :foo, Foo.Web.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "y/CuyNlPg9DIlXGnKHcwLDymQp+6IA98Q98SjqP07H+qqzoPXbKJnFP4ACn8Vmny",
-  render_errors: [view: Foo.ErrorView, accepts: ~w(json)],
+  secret_key_base: "zh5zNghTMV0H/iO7mvU3KjAg+4h3RDRFCp8MFUa2ggjPc9tHd4KsMqSE6GuVBXTh",
+  render_errors: [view: Foo.Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Foo.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

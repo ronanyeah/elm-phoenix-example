@@ -1,7 +1,18 @@
-defmodule Foo.ErrorHelpers do
+defmodule Foo.Web.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
+
+  use Phoenix.HTML
+
+  @doc """
+  Generates tag for inlined form input errors.
+  """
+  def error_tag(form, field) do
+    if error = form.errors[field] do
+      content_tag :span, translate_error(error), class: "help-block"
+    end
+  end
 
   @doc """
   Translates an error message using gettext.
@@ -21,9 +32,9 @@ defmodule Foo.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(Foo.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Foo.Web.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(Foo.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Foo.Web.Gettext, "errors", msg, opts)
     end
   end
 end

@@ -1,6 +1,6 @@
 const { resolve } = require( 'path' );
 
-const outputPath = resolve('./priv/static/js');
+const outputPath = resolve('../priv/static/js');
 
 module.exports = {
   entry: './elm/index.js',

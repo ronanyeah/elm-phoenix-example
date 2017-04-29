@@ -1,7 +1,7 @@
-defmodule Foo.Endpoint do
+defmodule Foo.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :foo
 
-  socket "/socket", Foo.UserSocket
+  socket "/socket", Foo.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -14,6 +14,8 @@ defmodule Foo.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
+    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
+    plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
   end
 
@@ -34,7 +36,19 @@ defmodule Foo.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_foo_key",
-    signing_salt: "kwwWGNh1"
+    signing_salt: "ev5tUB2L"
 
-  plug Foo.Router
+  plug Foo.Web.Router
+
+  @doc """
+  Dynamically loads configuration from the system environment
+  on startup.
+
+  It receives the endpoint configuration from the config files
+  and must return the updated configuration.
+  """
+  def load_from_system_env(config) do
+    port = System.get_env("PORT") || raise "expected the PORT environment variable to be set"
+    {:ok, Keyword.put(config, :http, [:inet6, port: port])}
+  end
 end
