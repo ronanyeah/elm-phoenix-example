@@ -11,7 +11,7 @@ The Phoenix application has been named `Foo` to make it easy to identify where y
 ## REQUIREMENTS
 - [Elixir](http://elixir-lang.org/)/[Mix](http://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)/[Phoenix](http://www.phoenixframework.org/) ([Installation guide](http://www.phoenixframework.org/docs/installation))
 - [Node.js](https://nodejs.org/en/)/[npm](https://www.npmjs.com/) (Install using [nvm](https://github.com/creationix/nvm))
-- [Elm](http://elm-lang.org/) (`$ npm i -g elm`)
+- [Elm](http://elm-lang.org/) (`$ npm install --global elm`)
 - A [PostgreSQL](https://www.postgresql.org/) server running on your machine.
 
 ## FEATURES
