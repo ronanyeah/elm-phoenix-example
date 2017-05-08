@@ -1,4 +1,4 @@
-const { resolve } = require( 'path' );
+const { resolve } = require('path');
 
 const outputPath = resolve('../priv/static/js');
 
