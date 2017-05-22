@@ -133,7 +133,7 @@ getPost : Int -> Cmd Msg
 getPost id =
     let
         url =
-            "http://jsonplaceholder.typicode.com/posts/" ++ toString id
+            "https://jsonplaceholder.typicode.com/posts/" ++ toString id
     in
         Http.send HttpCallback (Http.get url responseDecoder)
 
