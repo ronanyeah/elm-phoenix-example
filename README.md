@@ -1,7 +1,5 @@
 # Elm + Phoenix
 
-__NOTE:__ This represents Phoenix 1.3. It is finalised but has not been officially released yet. More information [here](https://gist.github.com/chrismccord/71ab10d433c98b714b75c886eff17357).
-
 This is a minimum setup for an Elm + Phoenix project, using webpack for bundling.
 
 This is intended to be a teaching tool rather than a production boilerplate, therefore the webpack config is as small as possible, and there is only very basic Phoenix usage.
