@@ -1,3 +1,5 @@
+__WARNING:__ I haven't been paying much attention to Phoenix lately so this repo is likely to be out of date.
+
 # Elm + Phoenix
 
 This is a minimum setup for an Elm + Phoenix project, using webpack for bundling.
